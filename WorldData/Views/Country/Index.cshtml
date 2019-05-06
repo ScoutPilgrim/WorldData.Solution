@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+@using WorldData.Models;
+<div class="container">
+  <h1>Country DataBase</h1>
+  <ul>
+    @foreach(CountryDB countryDB in Model)
+    {
+      <li>City: @countryDB.GetCountryName(), Population:  @countryDB.GetCountryPop()</li>
+    }
+  </ul>
+  <a href="/">Home</a>
+  <a href="/city">City DB</a>
+</div>
